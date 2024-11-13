@@ -1,17 +1,212 @@
-* {
-  margin:0px;
-  padding:0px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
-#octocat {
-  display: block;
-  width:384px;
-  margin: 50px auto;
+section {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
 }
 
-p {
-  display: block;
-  width: 400px;
-  margin: 50px auto;
-  font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+/* Navigation Bar */
+nav {
+    background-color: #6a0dad;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.social-media a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.social-media a:hover {
+    background-color: #ff6b6b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack nav-links for smaller screens */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .nav-links a {
+        padding: 0.5em;
+    }
+
+    /* Center-align section content */
+    section {
+        padding: 1em;
+        max-width: 90%;
+    }
+
+    /* Adjust footer */
+    footer ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    /* Social Media */
+    .social-media {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Increase logo size */
+    .nav-logo {
+        font-size: 1.2em;
+    }
+
+    /* Footer padding */
+    footer {
+        padding: 0.5em;
+    }
+}
+/* Form Styling */
+form {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 1em auto;
+}
+
+form h3 {
+    text-align: center;
+    color: #6a0dad;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #6a0dad;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.75em;
+    margin-top: 1.5em;
+    background-color: #6a0dad;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff6b6b;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
